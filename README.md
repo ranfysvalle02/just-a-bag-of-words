@@ -1,12 +1,12 @@
-# preBERT: The Foundations of Text Representation
+# The Foundations of Text Representation
 
-## The World Before BERT: How Early Text Representation Models Shaped Today’s AI
+## The World Before ChatGPT: How Early Text Representation Models Shaped Today’s AI
 
 ![](https://images.squarespace-cdn.com/content/v1/5f831c8e85a8ea3b5baabcbd/1615645049220-VSASS4Q65WTC8YON4FQ3/0*kBwh_sX7lsJxrOvr.png?format=2500w)
 
 __Image Credit to [Word2Vec vs BERT](https://www.saltdatalabs.com/blog/word2vec-vs-bert)__
 
-In the last few years, models like BERT (Bidirectional Encoder Representations from **Transformers**) have radically transformed how we interact with technology, from search engines to virtual assistants. Yet, behind BERT's incredible understanding of language lies a long history of evolving text representation techniques that have shaped the foundation of modern Natural Language Processing (NLP). This blog post takes a journey through the pioneering approaches that dominated before BERT’s emergence, exploring the humble beginnings of Bag of Words (BoW), the innovations of Word2Vec, and how these earlier methods helped us build the AI systems that today power some of the world's largest companies.
+In the last few years, models like BERT (Bidirectional Encoder Representations from **Transformers**) and OpenAI's GPT models have radically transformed how we interact with technology, from search engines to virtual assistants. Yet, behind BERT's incredible understanding of language lies a long history of evolving text representation techniques that have shaped the foundation of modern Natural Language Processing (NLP). This blog post takes a journey through the pioneering approaches that dominated before BERT’s emergence, exploring the humble beginnings of Bag of Words (BoW), the innovations of Word2Vec, and how these earlier methods helped us build the AI systems that today power some of the world's largest companies.
 
 As artificial intelligence (AI) continues to integrate deeper into industries from healthcare to finance, understanding these historical methods isn't just academic—it's essential for grasping where NLP is heading in the future. 
 
