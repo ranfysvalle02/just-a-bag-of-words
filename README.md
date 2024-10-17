@@ -135,6 +135,11 @@ KEY: zipcode
 VALUE: 12345
 ```
 
+- **KEY tokens:** These represent the names of keys or properties within the JSON object. For example, in the JSON object `{"name": "Alice", "age": 30}`, the tokens would be `KEY: name` and `KEY: age`.
+- **VALUE tokens:** These represent the values associated with the keys. In the same example, the VALUE tokens would be `VALUE: Alice` and `VALUE: 30`.
+
+By breaking down the JSON object into individual tokens, the code effectively creates a structured representation of the data that can be processed or analyzed further. This tokenization process is often used in natural language processing tasks, data mining, and other applications where it's necessary to extract and analyze information from unstructured text data.
+
 ---
 
 ### **Nuances of Tokenizing JSON:**
