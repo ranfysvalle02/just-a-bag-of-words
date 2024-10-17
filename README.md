@@ -38,6 +38,11 @@ print(tokens)
 ['Tokenization', 'is', "n't", 'as', 'easy', 'as', 'it', 'seems', '.']
 ```
 
+### Key Insights:
+
+- **Handling Contractions:** Notice how "isn't" is split into "is" and "n't", reflecting the underlying meaning more accurately.
+- **Punctuation Handling:** The period at the end of the sentence is treated as a separate token, which can be crucial in certain NLP tasks like sentiment analysis or named entity recognition.
+
 ### **Why use Punkt?**
 
 Punkt is designed to split sentences and words more intelligently than just splitting by spaces or punctuation marks. Here’s why it’s essential:
@@ -52,15 +57,6 @@ Punkt is designed to split sentences and words more intelligently than just spli
 
 In short, Punkt helps make tokenization more accurate by handling linguistic nuances and complex tokenization scenarios that basic splitting functions might miss.
 
-![](https://www.nomidl.com/wp-content/uploads/2021/12/tokenization.jpeg)
-
-__Image Credit to [Tokenization in NLP](https://www.nomidl.com/natural-language-processing/what-is-tokenization-in-nlp)__
-
-### Key Insights:
-
-- **Handling Contractions:** Notice how "isn't" is split into "is" and "n't", reflecting the underlying meaning more accurately.
-- **Punctuation Handling:** The period at the end of the sentence is treated as a separate token, which can be crucial in certain NLP tasks like sentiment analysis or named entity recognition.
-
 ### Key points to remember about tokenization:
 
 - It's the first step in text preprocessing for NLP tasks.
@@ -68,7 +64,7 @@ __Image Credit to [Tokenization in NLP](https://www.nomidl.com/natural-language-
 - The choice of token depends on the task at hand. For instance, if you're analyzing sentiment, you might want to consider phrases (like "not good") instead of just words.
 - Tokenization isn't always straightforward, especially for languages other than English. Specialized tokenizers might be needed for different languages or tasks.
 
-## JSON tokenization
+## What about JSON tokenization?
 
 When dealing with JSON (JavaScript Object Notation) data, tokenization becomes more nuanced. JSON is often used to represent structured data, containing nested objects, arrays, and key-value pairs. Simply splitting text by spaces won’t work here—you’ll need to preserve both the structure and the meaning of the data.
 
