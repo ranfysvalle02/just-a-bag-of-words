@@ -1,14 +1,14 @@
 # preBERT: The Foundations of Text Representation
 
-**The World Before BERT: How Early Text Representation Models Shaped Today’s AI**
+## The World Before BERT: How Early Text Representation Models Shaped Today’s AI
 
-**Introduction:**
+### Introduction:
 
 In the last few years, models like BERT (Bidirectional Encoder Representations from Transformers) have radically transformed how we interact with technology, from search engines to virtual assistants. Yet, behind BERT's incredible understanding of language lies a long history of evolving text representation techniques that have shaped the foundation of modern Natural Language Processing (NLP). This blog post takes a journey through the pioneering approaches that dominated before BERT’s emergence, exploring the humble beginnings of Bag of Words (BoW), the innovations of Word2Vec, and how these earlier methods helped us build the AI systems that today power some of the world's largest companies.
 
 As artificial intelligence (AI) continues to integrate deeper into industries from healthcare to finance, understanding these historical methods isn't just academic—it's essential for grasping where NLP is heading in the future. 
 
-**Tokenization: The First Step in Text Processing**
+## Tokenization: The First Step in Text Processing
 
 Before we can even begin to represent text in a way that machines can understand, we need to break it down into smaller, manageable pieces. This is where tokenization comes in. Tokenization is the process of splitting a large paragraph or text into smaller units, typically words or phrases, called tokens. These tokens become the basic building blocks for further text analysis.
 
@@ -36,7 +36,7 @@ print(tokens)
 ['Tokenization', 'is', "n't", 'as', 'easy', 'as', 'it', 'seems', '.']
 ```
 
-**Key Insights:**
+### Key Insights:
 
 - **Handling Contractions:** Notice how "isn't" is split into "is" and "n't", reflecting the underlying meaning more accurately.
 - **Punctuation Handling:** The period at the end of the sentence is treated as a separate token, which can be crucial in certain NLP tasks like sentiment analysis or named entity recognition.
@@ -45,14 +45,14 @@ print(tokens)
 - `nltk.word_tokenize` splits the input text into individual words, effectively tokenizing the text.
 - The output is a list of tokens, which can then be further processed or analyzed.
 
-**Key points to remember about tokenization:**
+### Key points to remember about tokenization:
 
 - It's the first step in text preprocessing for NLP tasks.
 - It breaks down text into smaller units (tokens), which can be words, phrases, or even sentences.
 - The choice of token depends on the task at hand. For instance, if you're analyzing sentiment, you might want to consider phrases (like "not good") instead of just words.
 - Tokenization isn't always straightforward, especially for languages other than English. Specialized tokenizers might be needed for different languages or tasks.
 
-**JSON tokenization**
+## JSON tokenization
 
 When dealing with JSON (JavaScript Object Notation) data, tokenization becomes more nuanced. JSON is often used to represent structured data, containing nested objects, arrays, and key-value pairs. Simply splitting text by spaces won’t work here—you’ll need to preserve both the structure and the meaning of the data.
 
@@ -155,7 +155,7 @@ By breaking down the JSON object into individual tokens, the code effectively cr
 
 ---
 
-### **Nuances of Tokenizing JSON:**
+### Nuances of Tokenizing JSON:
 
 1. **Preserving Structure:** One of the key challenges when tokenizing JSON data is maintaining its hierarchical structure. Simply flattening everything into a list of words (as you might with regular text) would lose the relationships between keys and values, which are crucial for many tasks.
 
@@ -167,7 +167,7 @@ By breaking down the JSON object into individual tokens, the code effectively cr
 
 ---
 
-#### **Why Tokenizing JSON Matters:**
+#### Why Tokenizing JSON Matters:
 
 Tokenizing JSON data is critical in real-world applications where textual data is structured (like web APIs, logs, or configuration files). Unlike free-form text, JSON has a specific format that must be maintained during tokenization. Proper tokenization ensures the machine can interpret both the structure and the content correctly, which is essential for tasks like:
 
@@ -177,13 +177,13 @@ Tokenizing JSON data is critical in real-world applications where textual data i
 
 Tokenization is a crucial step in text representation as it determines how the text will be broken down and understood by the subsequent models. Whether you're using Bag of Words, Word2Vec, or even more advanced models like BERT, tokenization is the first step in making text understandable to machines.
 
-**Bag of Words (BoW): A Simple Start**
+## Bag of Words (BoW): A Simple Start
 
 The Bag of Words (BoW) model was one of the earliest attempts to represent text in a way that computers could understand. This method converts text into a ‘bag’ of words, focusing only on the frequency of words while ignoring their order. While BoW is remarkably simple, its limitations are clear. It strips away context and meaning, treating words like "cat" and "dog" as no more related than "airplane" and "bicycle." Despite these drawbacks, BoW became a staple in early text classification tasks like spam filtering and sentiment analysis.
 
 The limitations of BoW became more obvious as language models became essential for applications like chatbots and machine translation, where nuance and word relationships are crucial. Nevertheless, it laid the groundwork for more sophisticated models to come.
 
-### 1. **Bag of Words (BoW)**
+### 1. Bag of Words (BoW)
 
 BoW simply represents a document as a frequency count of words. Here's an example using `CountVectorizer` from `sklearn`.
 
@@ -212,7 +212,7 @@ print(vectorizer.get_feature_names_out())
 - Sparse matrix representation: It represents the BoW representation as a sparse matrix, which is efficient for handling large datasets with many unique words.
 - Customization: You can customize the CountVectorizer using various parameters, such as stop_words, ngram_range, and max_features, to tailor the BoW representation to your specific needs.
 
-Limitations of Bag of Words:
+### Limitations of Bag of Words:
 
 While the BoW model is simple and easy to implement, it does have its limitations:
 
@@ -220,13 +220,13 @@ While the BoW model is simple and easy to implement, it does have its limitation
 - It treats each word as an independent entity and doesn't capture the semantic relationships between words.
 - It can result in a high-dimensional feature vector due to the large size of the vocabulary, which can lead to computational challenges.
 
-**Continuous Bag of Words (CBOW): The Quest for Context**
+## Continuous Bag of Words (CBOW): The Quest for Context
 
 To address the lack of context in BoW, researchers introduced the Continuous Bag of Words (CBOW) model. Part of the Word2Vec family, CBOW aims to produce word embeddings, vectorized representations that encode semantic meaning. Unlike BoW, CBOW takes surrounding words (context) into account to predict a target word. This is a significant leap forward, allowing machines to better understand the relationships between words, although CBOW still struggles with subtle differences like polysemy (where a word has multiple meanings).
 
 With models like CBOW, AI began to move closer to understanding text in a way more akin to how humans do—grasping word meanings based on their surroundings. This breakthrough became a springboard for further advances in text representation.
 
-### 2. **Continuous Bag of Words (CBOW) - PyTorch Lightning**
+### 2. Continuous Bag of Words (CBOW) - PyTorch Lightning
 
 For CBOW, the context (surrounding words) predicts the target word. Here's a simple PyTorch Lightning implementation.
 
@@ -284,13 +284,13 @@ trainer.fit(model, train_loader)
 **Explanation:**  
 - CBOW predicts a word based on its surrounding words (context). The model averages the embeddings of the context words to predict the target word.
 
-**Skip-Gram: Predicting Context for Precision**
+## Skip-Gram: Predicting Context for Precision
 
 If CBOW was a step forward, the Skip-Gram model took NLP even further. Rather than predicting a target word from its context, Skip-Gram reverses the process, using a given word to predict its surrounding words. This model is particularly useful for understanding rare words and phrases, outperforming CBOW when data is limited.
 
 Skip-Gram’s success in capturing intricate relationships between words made it a favorite in building large-scale models at organizations like Google and Facebook, allowing them to create better recommendation systems, improve search engine results, and enhance voice recognition technology. 
 
-### 3. **Skip-Gram - PyTorch Lightning**
+### 3. Skip-Gram - PyTorch Lightning
 
 Skip-Gram does the reverse of CBOW, predicting the surrounding context based on a target word.
 
@@ -349,13 +349,13 @@ trainer.fit(model, train_loader)
 - The Skip-Gram model predicts the surrounding words (context) given a target word.
 - Like CBOW, the training uses a neural network to generate word embeddings, but the task is reversed.
 
-**Word2Vec: The Revolution Before the Revolution**
+## Word2Vec: The Revolution Before the Revolution
 
 The Word2Vec models, including CBOW and Skip-Gram, marked a seismic shift in NLP. Developed by Google in 2013, these shallow neural networks could produce high-quality word embeddings efficiently. For the first time, NLP models could understand relationships between words based on their usage patterns across vast datasets. Word2Vec helped NLP models grasp concepts like the famous "king - man + woman = queen" analogy, encapsulating the semantic relationship between words in vector space. 
 
 Yet, despite their power, Word2Vec models had limitations. They were still relatively shallow, meaning they struggled with tasks that required a deep understanding of word order, syntax, or polysemy. This set the stage for more complex models that could tackle those challenges head-on.
 
-### 4. **Word2Vec (Skip-Gram variant) - PyTorch Lightning**
+### 4. Word2Vec (Skip-Gram variant) - PyTorch Lightning
 
 Word2Vec is a family of models that includes CBOW and Skip-Gram. Here’s a simplified Word2Vec (Skip-Gram variant) using PyTorch Lightning.
 
@@ -397,10 +397,8 @@ trainer.fit(model, train_loader)
 - Word2Vec (Skip-Gram) uses word embeddings to capture semantic and syntactic similarities between words.
 - The model maximizes the dot product between target and context embeddings, pushing similar words closer together in vector space.
 
-**Conclusion: The Future Built on the Past**
+## Conclusion: The Future Built on the Past
 
 In 2024, as AI begins to reshape industries, politics, and daily life, it’s easy to forget the early days of NLP when methods like BoW or Skip-Gram dominated the field. Understanding the evolution of text representation from these simpler models to BERT—and now, beyond—helps us appreciate the complex AI systems we rely on today. As we look to the future, where NLP models could enable even more personalized and nuanced interactions between humans and machines, one thing is clear: the past is prologue.
 
 The next wave of AI innovation will build upon these foundations, and it’s crucial to understand where we’ve come from to anticipate where we’re headed. With new breakthroughs in large language models, multimodal learning, and AI ethics, the journey that began with simple bags of words is far from over.
-
-
