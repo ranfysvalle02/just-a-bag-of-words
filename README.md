@@ -8,6 +8,39 @@ In the last few years, models like BERT (Bidirectional Encoder Representations f
 
 As artificial intelligence (AI) continues to integrate deeper into industries from healthcare to finance, understanding these historical methods isn't just academic—it's essential for grasping where NLP is heading in the future. 
 
+**Tokenization: The First Step in Text Processing**
+
+Before we can even begin to represent text in a way that machines can understand, we need to break it down into smaller, manageable pieces. This is where tokenization comes in. Tokenization is the process of splitting a large paragraph or text into smaller units, typically words or phrases, called tokens. These tokens become the basic building blocks for further text analysis.
+
+Tokenization might seem like a simple task, but it's more complex than just splitting text by spaces. Consider sentences with contractions like "don't" or "it's," or compound words like "mother-in-law." Different languages also have different rules for tokenization. For instance, in Chinese, words often consist of multiple characters with no spaces in between.
+
+Here's a simple example of tokenization using the Natural Language Toolkit (NLTK) in Python:
+
+```python
+import nltk
+
+# Sample text
+text = "This is a simple example of tokenization."
+
+# Tokenize the text
+tokens = nltk.word_tokenize(text)
+
+print(tokens)
+```
+
+**Explanation:**
+- `nltk.word_tokenize` splits the input text into individual words, effectively tokenizing the text.
+- The output is a list of tokens, which can then be further processed or analyzed.
+
+**Key points to remember about tokenization:**
+
+- It's the first step in text preprocessing for NLP tasks.
+- It breaks down text into smaller units (tokens), which can be words, phrases, or even sentences.
+- The choice of token depends on the task at hand. For instance, if you're analyzing sentiment, you might want to consider phrases (like "not good") instead of just words.
+- Tokenization isn't always straightforward, especially for languages other than English. Specialized tokenizers might be needed for different languages or tasks.
+
+Tokenization is a crucial step in text representation as it determines how the text will be broken down and understood by the subsequent models. Whether you're using Bag of Words, Word2Vec, or even more advanced models like BERT, tokenization is the first step in making text understandable to machines.
+
 **Bag of Words (BoW): A Simple Start**
 
 The Bag of Words (BoW) model was one of the earliest attempts to represent text in a way that computers could understand. This method converts text into a ‘bag’ of words, focusing only on the frequency of words while ignoring their order. While BoW is remarkably simple, its limitations are clear. It strips away context and meaning, treating words like "cat" and "dog" as no more related than "airplane" and "bicycle." Despite these drawbacks, BoW became a staple in early text classification tasks like spam filtering and sentiment analysis.
