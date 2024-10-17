@@ -215,6 +215,31 @@ trainer.fit(model, train_loader)
 - Word2Vec (Skip-Gram) uses word embeddings to capture semantic and syntactic similarities between words.
 - The model maximizes the dot product between target and context embeddings, pushing similar words closer together in vector space.
 
+### **The Transformer Architecture: A Paradigm Shift in NLP**
+
+While techniques like BoW, Word2Vec, CBOW, and Skip-Gram laid the foundation for NLP, it was the introduction of the **Transformer architecture** that truly revolutionized the field. Published by Vaswani et al. in 2017, the Transformer architecture dispenses with the need for recurrent networks (like LSTMs or GRUs) by relying entirely on a mechanism called **self-attention**. This allows the Transformer to process entire sequences in parallel, significantly improving the efficiency and scalability of NLP models.
+
+Transformers are the foundation of advanced language models such as BERT and GPT, enabling them to understand context bidirectionally and handle much larger sequences of text. This architecture has been adopted for various tasks in NLP, including translation, summarization, and question-answering.
+
+#### Key Components of the Transformer:
+
+1. **Self-Attention Mechanism:**  
+   The core innovation of the Transformer. Self-attention allows the model to weigh the importance of different words in a sequence when encoding a particular word. This helps capture long-range dependencies between words more effectively than traditional models.
+
+2. **Multi-Head Attention:**  
+   Rather than a single attention mechanism, the Transformer uses multiple attention heads to focus on different parts of the sentence simultaneously. This helps the model understand relationships at multiple levels of granularity.
+
+3. **Positional Encoding:**  
+   Since Transformers process input in parallel, they lack a built-in sense of word order. Positional encodings are added to the input embeddings to inject information about the order of words into the model.
+
+4. **Feedforward Network:**  
+   After the self-attention layer, the Transformer uses a fully connected feedforward network to further process the representation of each word.
+
+5. **Layer Normalization & Residual Connections:**  
+   Each sub-layer (like self-attention or feedforward) is followed by layer normalization and residual connections to improve training stability.
+
+The Transformer model’s ability to capture context without relying on sequential data processing, and to scale efficiently with large datasets, made it the foundation for state-of-the-art models like BERT, GPT, and T5.
+
 **The Turning Point: Enter BERT and Beyond**
 
 In 2018, Google released BERT, a model that fundamentally redefined how text is represented and understood. Unlike previous models, BERT considers words in their full context by using bidirectional transformers. This means BERT can understand word meanings based on both their left and right context, leading to a much richer and more accurate understanding of language.
