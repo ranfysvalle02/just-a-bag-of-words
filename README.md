@@ -57,10 +57,6 @@ In short, Punkt helps make tokenization more accurate by handling linguistic nua
 - **Handling Contractions:** Notice how "isn't" is split into "is" and "n't", reflecting the underlying meaning more accurately.
 - **Punctuation Handling:** The period at the end of the sentence is treated as a separate token, which can be crucial in certain NLP tasks like sentiment analysis or named entity recognition.
 
-**Explanation:**
-- `nltk.word_tokenize` splits the input text into individual words, effectively tokenizing the text.
-- The output is a list of tokens, which can then be further processed or analyzed.
-
 ### Key points to remember about tokenization:
 
 - It's the first step in text preprocessing for NLP tasks.
