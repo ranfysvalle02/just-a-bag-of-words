@@ -263,10 +263,6 @@ To address the lack of context in BoW, researchers introduced the Continuous Bag
 
 With models like CBOW, AI began to move closer to understanding text in a way more akin to how humans do—grasping word meanings based on their surroundings. This breakthrough became a springboard for further advances in text representation.
 
-### 2. Continuous Bag of Words (CBOW) - PyTorch Lightning
-
-For CBOW, the context (surrounding words) predicts the target word. Here's a simple PyTorch Lightning implementation.
-
 ```python
 import torch
 import torch.nn as nn
@@ -326,10 +322,6 @@ trainer.fit(model, train_loader)
 If CBOW was a step forward, the Skip-Gram model took NLP even further. Rather than predicting a target word from its context, Skip-Gram reverses the process, using a given word to predict its surrounding words. This model is particularly useful for understanding rare words and phrases, outperforming CBOW when data is limited.
 
 Skip-Gram’s success in capturing intricate relationships between words made it a favorite in building large-scale models at organizations like Google and Facebook, allowing them to create better recommendation systems, improve search engine results, and enhance voice recognition technology. 
-
-### 3. Skip-Gram - PyTorch Lightning
-
-Skip-Gram does the reverse of CBOW, predicting the surrounding context based on a target word.
 
 ```python
 import torch
