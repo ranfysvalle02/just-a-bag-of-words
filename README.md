@@ -1,6 +1,6 @@
 # preBERT
 
-**Title: The World Before BERT: How Early Text Representation Models Shaped Today’s AI**
+**The World Before BERT: How Early Text Representation Models Shaped Today’s AI**
 
 **Introduction:**
 
