@@ -191,30 +191,6 @@ Tokenizing JSON data is critical in real-world applications where textual data i
 
 Tokenization is a crucial step in text representation as it determines how the text will be broken down and understood by the subsequent models. Whether you're using Bag of Words, Word2Vec, or even more advanced models like GPT-4, tokenization is the first step in making text understandable to machines.
 
-## Capturing Meaning in Text
-
-Capturing the meaning in text is one of the most challenging aspects of text analysis. It involves understanding the context, semantics, and syntax of the text. Several techniques are used to capture meaning in text:
-
-- **Part-of-Speech (POS) Tagging:** This involves labeling each word in the text as a noun, verb, adjective, etc. POS tagging helps in understanding the grammatical structure of the text and the role of each word in the sentence.
-
-- **Named Entity Recognition (NER):** NER involves identifying and classifying named entities in the text, such as persons, organizations, locations, etc. It helps in understanding who or what the text is about.
-
-- **Dependency Parsing:** This involves analyzing the grammatical structure of the sentence to determine the relationships between words. Dependency parsing helps in understanding how words in a sentence relate to each other.
-
-- **Semantic Analysis:** This involves understanding the meaning of the text. Techniques used in semantic analysis include word sense disambiguation (determining the correct meaning of a word based on context), semantic role labeling (identifying the semantic roles of words in a sentence), and semantic similarity (measuring the semantic similarity between words or sentences).
-
-## Word Embeddings: Capturing Semantic Relationships
-
-Word embeddings are a type of word representation that allows words with similar meaning to have a similar representation. They are a distributed representation for text that is perhaps one of the key breakthroughs for the impressive performance of deep learning methods on challenging natural language processing problems.
-
-Word embeddings are in fact a class of techniques where individual words are represented as real-valued vectors in a predefined vector space. Each word is mapped to one vector and the vector values are learned in a way that resembles a neural network, and hence the technique is often lumped into the field of deep learning.
-
-Key benefits of word embeddings include:
-
-- **Dimensionality Reduction:** Word embeddings reduce the dimensionality of text data, making it easier to process.
-- **Semantic Similarity:** Words that are semantically similar are close to each other in the vector space, making it possible to capture semantic relationships between words.
-- **Contextual Information:** Word embeddings capture the context in which words are used, allowing the model to learn not just the words but also their meaning in the text.
-
 ![](https://aiml.com/wp-content/uploads/2023/02/disadvantage-bow-1024x650.png)
 
 __Image Credit to https://aiml.com/what-are-the-advantages-and-disadvantages-of-bag-of-words-model/__
@@ -391,6 +367,30 @@ The Continuous Bag of Words (CBOW) model is a popular method for training word e
 The Word2Vec models, including CBOW, marked a seismic shift in NLP. Developed by Google in 2013, these shallow neural networks could produce high-quality word embeddings efficiently. For the first time, NLP models could understand relationships between words based on their usage patterns across vast datasets. Word2Vec helped NLP models grasp concepts like the famous "king - man + woman = queen" analogy, encapsulating the semantic relationship between words in vector space. 
 
 Yet, despite their power, Word2Vec models had limitations. They were still relatively shallow, meaning they struggled with tasks that required a deep understanding of word order, syntax, or polysemy. This set the stage for more complex models that could tackle those challenges head-on.
+
+## Capturing Meaning in Text
+
+Capturing the meaning in text is one of the most challenging aspects of text analysis. It involves understanding the context, semantics, and syntax of the text. Several techniques are used to capture meaning in text:
+
+- **Part-of-Speech (POS) Tagging:** This involves labeling each word in the text as a noun, verb, adjective, etc. POS tagging helps in understanding the grammatical structure of the text and the role of each word in the sentence.
+
+- **Named Entity Recognition (NER):** NER involves identifying and classifying named entities in the text, such as persons, organizations, locations, etc. It helps in understanding who or what the text is about.
+
+- **Dependency Parsing:** This involves analyzing the grammatical structure of the sentence to determine the relationships between words. Dependency parsing helps in understanding how words in a sentence relate to each other.
+
+- **Semantic Analysis:** This involves understanding the meaning of the text. Techniques used in semantic analysis include word sense disambiguation (determining the correct meaning of a word based on context), semantic role labeling (identifying the semantic roles of words in a sentence), and semantic similarity (measuring the semantic similarity between words or sentences).
+
+## Word Embeddings: Capturing Semantic Relationships
+
+Word embeddings are a type of word representation that allows words with similar meaning to have a similar representation. They are a distributed representation for text that is perhaps one of the key breakthroughs for the impressive performance of deep learning methods on challenging natural language processing problems.
+
+Word embeddings are in fact a class of techniques where individual words are represented as real-valued vectors in a predefined vector space. Each word is mapped to one vector and the vector values are learned in a way that resembles a neural network, and hence the technique is often lumped into the field of deep learning.
+
+Key benefits of word embeddings include:
+
+- **Dimensionality Reduction:** Word embeddings reduce the dimensionality of text data, making it easier to process.
+- **Semantic Similarity:** Words that are semantically similar are close to each other in the vector space, making it possible to capture semantic relationships between words.
+- **Contextual Information:** Word embeddings capture the context in which words are used, allowing the model to learn not just the words but also their meaning in the text.
 
 ## Conclusion: The Future Built on the Past
 
