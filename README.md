@@ -187,6 +187,8 @@ Tokenizing JSON data is critical in real-world applications where textual data i
 - **Entity recognition:** If you're building a model to recognize specific entities (like addresses or user information), you'll need to tokenize structured data accurately.
 - **Preprocessing for Machine Learning:** Structured JSON data might feed into ML pipelines, and improper tokenization could cause models to misinterpret the input.
 
+---
+
 Tokenization is a crucial step in text representation as it determines how the text will be broken down and understood by the subsequent models. Whether you're using Bag of Words, Word2Vec, or even more advanced models like BERT, tokenization is the first step in making text understandable to machines.
 
 ## Bag of Words (BoW): A Simple Start
