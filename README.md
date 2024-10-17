@@ -380,7 +380,7 @@ Capturing the meaning in text is one of the most challenging aspects of text ana
 
 - **Semantic Analysis:** This involves understanding the meaning of the text. Techniques used in semantic analysis include word sense disambiguation (determining the correct meaning of a word based on context), semantic role labeling (identifying the semantic roles of words in a sentence), and semantic similarity (measuring the semantic similarity between words or sentences).
 
-## Word Embeddings: Capturing Semantic Relationships
+## Capturing Semantic Relationships
 
 Word embeddings are a type of word representation that allows words with similar meaning to have a similar representation. They are a distributed representation for text that is perhaps one of the key breakthroughs for the impressive performance of deep learning methods on challenging natural language processing problems.
 
