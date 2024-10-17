@@ -267,15 +267,21 @@ With models like CBOW, AI began to move closer to understanding text in a way mo
 
 ```python
 import torch
-import torch.nn as nn
-import pytorch_lightning as pl
 from torch.utils.data import DataLoader, Dataset
+import pytorch_lightning as pl
+
+# Vocabulary
+vocab = {"winter": 0, "summer": 1, "hot": 2, "cold": 3, "snow": 4, "sun": 5}
+
+# Convert words to tensor
+def words_to_tensor(words):
+    return torch.tensor([vocab[word] for word in words])
 
 # Example dataset class
 class CBOWDataset(Dataset):
     def __init__(self, context_data, target_data):
-        self.context_data = context_data
-        self.target_data = target_data
+        self.context_data = [words_to_tensor(context) for context in context_data]
+        self.target_data = [vocab[target] for target in target_data]
 
     def __len__(self):
         return len(self.target_data)
@@ -287,37 +293,50 @@ class CBOWDataset(Dataset):
 class CBOWModel(pl.LightningModule):
     def __init__(self, vocab_size, embedding_dim):
         super().__init__()
-        self.embeddings = nn.Embedding(vocab_size, embedding_dim)
-        self.linear = nn.Linear(embedding_dim, vocab_size)
+        self.embeddings = torch.nn.Embedding(vocab_size, embedding_dim)
+        self.linear = torch.nn.Linear(embedding_dim, vocab_size)
 
     def forward(self, context):
         embedded = self.embeddings(context).mean(dim=1)  # Average context embeddings
-        output = self.linear(embedded)
+        output = self.linear(embedded)  # No need to reshape embedded
         return output
 
     def training_step(self, batch, batch_idx):
         context, target = batch
-        output = self.forward(context)
-        loss = nn.CrossEntropyLoss()(output, target)
+        output = self(context)
+        loss = torch.nn.functional.cross_entropy(output, target.view(-1))
+        self.log('train_loss', loss)
         return loss
 
     def configure_optimizers(self):
-        return torch.optim.Adam(self.parameters())
+        return torch.optim.Adam(self.parameters(), lr=0.001)
 
-# Sample training loop (context_data and target_data should be prepared beforehand)
-context_data = torch.tensor([[1, 2], [3, 4], [2, 3]])
-target_data = torch.tensor([0, 3, 2])
+if __name__ == "__main__":
+    # Sample training data
+    context_data = [["winter", "snow"], ["summer", "sun"], ["hot", "summer"], ["cold", "winter"], ["sun", "hot"], ["snow", "cold"]]
+    target_data = ["cold", "hot", "sun", "snow", "summer", "winter"]
 
-train_dataset = CBOWDataset(context_data, target_data)
-train_loader = DataLoader(train_dataset, batch_size=2, shuffle=True)
+    train_dataset = CBOWDataset(context_data, target_data)
+    train_loader = DataLoader(train_dataset, batch_size=1, shuffle=True)
 
-model = CBOWModel(vocab_size=5, embedding_dim=10)
-trainer = pl.Trainer(max_epochs=1)
-trainer.fit(model, train_loader)
+    model = CBOWModel(vocab_size=len(vocab), embedding_dim=10)
+
+    # Train the model
+    trainer = pl.Trainer(max_epochs=100)
+    trainer.fit(model, train_loader)
+
+    # Example usage for prediction
+    CTX = ["winter", "snow"]
+    context = words_to_tensor(CTX)  # Context: ["winter", "snow"]
+    print(CTX)
+    model.eval()
+    with torch.no_grad():
+        output = model(context.view(1, -1))
+        predicted_index = torch.argmax(output)
+        print(f"Predicted next word: {list(vocab.keys())[list(vocab.values()).index(predicted_index.item())]}")
 ```
 
-**Explanation:**  
-- CBOW predicts a word based on its surrounding words (context). The model averages the embeddings of the context words to predict the target word.
+The Continuous Bag of Words (CBOW) model is a popular method for training word embeddings. Word embeddings are a type of word representation that allows words with similar meaning to have a similar representation, which is crucial for many natural language processing (NLP) tasks.
 
 ## Skip-Gram: Predicting Context for Precision
 
