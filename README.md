@@ -163,8 +163,6 @@ VALUE: 12345
 - **KEY tokens:** These represent the names of keys or properties within the JSON object. For example, in the JSON object `{"name": "Alice", "age": 30}`, the tokens would be `KEY: name` and `KEY: age`.
 - **VALUE tokens:** These represent the values associated with the keys. In the same example, the VALUE tokens would be `VALUE: Alice` and `VALUE: 30`.
 
-By breaking down the JSON object into individual tokens, the code effectively creates a structured representation of the data that can be processed or analyzed further. This tokenization process is often used in natural language processing tasks, data mining, and other applications where it's necessary to extract and analyze information from unstructured text data.
-
 ---
 
 ### Nuances of Tokenizing JSON:
@@ -191,6 +189,10 @@ Tokenizing JSON data is critical in real-world applications where textual data i
 
 Tokenization is a crucial step in text representation as it determines how the text will be broken down and understood by the subsequent models. Whether you're using Bag of Words, Word2Vec, or even more advanced models like BERT, tokenization is the first step in making text understandable to machines.
 
+![](https://aiml.com/wp-content/uploads/2023/02/disadvantage-bow-1024x650.png)
+
+__Image Credit to https://aiml.com/what-are-the-advantages-and-disadvantages-of-bag-of-words-model/__
+
 ## Bag of Words (BoW): A Simple Start
 
 The Bag of Words (BoW) model was one of the earliest attempts to represent text in a way that computers could understand. This method converts text into a ‘bag’ of words, focusing only on the frequency of words while ignoring their order. While BoW is remarkably simple, its limitations are clear. It strips away context and meaning, treating words like "cat" and "dog" as no more related than "airplane" and "bicycle." Despite these drawbacks, BoW became a staple in early text classification tasks like spam filtering and sentiment analysis.
@@ -216,6 +218,13 @@ print(bow_rep.toarray())
 print(vectorizer.get_feature_names_out())
 ```
 
+```
+[[1 0 0 1 1 0]
+ [1 1 1 1 0 0]
+ [0 0 0 0 1 1]]
+['deep' 'fun' 'is' 'learning' 'love' 'nlp']
+```
+
 **Explanation:**  
 - `CountVectorizer` converts the text documents into a sparse matrix where each row represents a document and each column represents a word in the vocabulary.
 - This basic BoW model doesn't consider word order or semantics.
@@ -225,6 +234,20 @@ print(vectorizer.get_feature_names_out())
 - Vocabulary creation: It automatically creates a vocabulary of unique words from the input text.
 - Sparse matrix representation: It represents the BoW representation as a sparse matrix, which is efficient for handling large datasets with many unique words.
 - Customization: You can customize the CountVectorizer using various parameters, such as stop_words, ngram_range, and max_features, to tailor the BoW representation to your specific needs.
+
+A sparse matrix is a matrix where most of the elements are zero. This is often the case in datasets with high dimensionality, such as those encountered in natural language processing or machine learning.
+
+In the context of the Bag-of-Words (BoW) representation, a sparse matrix is used to represent the occurrence of words in a document. Each row of the matrix corresponds to a document, and each column corresponds to a unique word in the vocabulary. The value at the intersection of a row and column indicates the number of times that word appears in the corresponding document.
+
+Because most documents will only contain a small subset of the total vocabulary, the resulting matrix will be very sparse, with many zero values. This makes it inefficient to store the entire matrix in a dense format. Instead, sparse matrix representations are used to store only the non-zero elements of the matrix, along with their corresponding row and column indices. This can significantly reduce the memory footprint of the BoW representation, making it feasible to work with large datasets.
+
+There are several different sparse matrix representations, including:
+
+* **Compressed Sparse Row (CSR) format:** This format stores the matrix as three arrays: one for the non-zero values, one for the column indices of the non-zero values, and one for the row offsets of the non-zero values.
+* **Compressed Sparse Column (CSC) format:** This format is similar to CSR, but it stores the matrix by column instead of by row.
+* **Coordinate List (COO) format:** This format stores the matrix as three arrays: one for the row indices of the non-zero values, one for the column indices of the non-zero values, and one for the non-zero values themselves.
+
+The choice of which sparse matrix representation to use depends on the specific application and the type of operations that will be performed on the matrix.
 
 ### Limitations of Bag of Words:
 
