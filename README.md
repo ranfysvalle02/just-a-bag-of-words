@@ -52,6 +52,10 @@ Punkt is designed to split sentences and words more intelligently than just spli
 
 In short, Punkt helps make tokenization more accurate by handling linguistic nuances and complex tokenization scenarios that basic splitting functions might miss.
 
+![](https://www.nomidl.com/wp-content/uploads/2021/12/tokenization.jpeg)
+
+__Image Credit to [Tokenization in NLP](https://www.nomidl.com/natural-language-processing/what-is-tokenization-in-nlp)__
+
 ### Key Insights:
 
 - **Handling Contractions:** Notice how "isn't" is split into "is" and "n't", reflecting the underlying meaning more accurately.
