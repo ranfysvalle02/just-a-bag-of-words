@@ -380,18 +380,6 @@ Capturing the meaning in text is one of the most challenging aspects of text ana
 
 - **Semantic Analysis:** This involves understanding the meaning of the text. Techniques used in semantic analysis include word sense disambiguation (determining the correct meaning of a word based on context), semantic role labeling (identifying the semantic roles of words in a sentence), and semantic similarity (measuring the semantic similarity between words or sentences).
 
-## Capturing Semantic Relationships
-
-Word embeddings are a type of word representation that allows words with similar meaning to have a similar representation. They are a distributed representation for text that is perhaps one of the key breakthroughs for the impressive performance of deep learning methods on challenging natural language processing problems.
-
-Word embeddings are in fact a class of techniques where individual words are represented as real-valued vectors in a predefined vector space. Each word is mapped to one vector and the vector values are learned in a way that resembles a neural network, and hence the technique is often lumped into the field of deep learning.
-
-Key benefits of word embeddings include:
-
-- **Dimensionality Reduction:** Word embeddings reduce the dimensionality of text data, making it easier to process.
-- **Semantic Similarity:** Words that are semantically similar are close to each other in the vector space, making it possible to capture semantic relationships between words.
-- **Contextual Information:** Word embeddings capture the context in which words are used, allowing the model to learn not just the words but also their meaning in the text.
-
 ## Conclusion: The Future Built on the Past
 
 In 2024, as AI begins to reshape industries, politics, and daily life, it’s easy to forget the early days of NLP when methods like BoW dominated the field. Understanding the evolution of text representation from these simpler models to GPT and beyond — helps us appreciate the complex AI systems we rely on today. As we look to the future, where NLP models could enable even more personalized and nuanced interactions between humans and machines, one thing is clear: the past is prologue.
