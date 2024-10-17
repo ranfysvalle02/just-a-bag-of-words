@@ -6,7 +6,7 @@
 
 __Image Credit to [Word2Vec vs BERT](https://www.saltdatalabs.com/blog/word2vec-vs-bert)__
 
-In the last few years, models like BERT (Bidirectional Encoder Representations from **Transformers**) and OpenAI's GPT models have radically transformed how we interact with technology, from search engines to virtual assistants. Yet, behind BERT's incredible understanding of language lies a long history of evolving text representation techniques that have shaped the foundation of modern Natural Language Processing (NLP). This blog post takes a journey through the pioneering approaches that dominated before BERT’s emergence, exploring the humble beginnings of Bag of Words (BoW), the innovations of Word2Vec, and how these earlier methods helped us build the AI systems that today power some of the world's largest companies.
+In the last few years, large language models have radically transformed how we interact with technology, from search engines to virtual assistants. Yet, behind LLM's incredible understanding of language lies a long history of evolving text representation techniques that have shaped the foundation of modern Natural Language Processing (NLP). This blog post takes a journey through the pioneering approaches that dominated before LLM’s emergence, exploring the humble beginnings of Bag of Words (BoW), the innovations of Word2Vec, and how these earlier methods helped us build the AI systems that today power some of the world's largest companies.
 
 As artificial intelligence (AI) continues to integrate deeper into industries from healthcare to finance, understanding these historical methods isn't just academic—it's essential for grasping where NLP is heading in the future. 
 
@@ -189,7 +189,7 @@ Tokenizing JSON data is critical in real-world applications where textual data i
 
 ## [Learn More About JSON tokenization here ](https://github.com/ranfysvalle02/json-tokenization/)
 
-Tokenization is a crucial step in text representation as it determines how the text will be broken down and understood by the subsequent models. Whether you're using Bag of Words, Word2Vec, or even more advanced models like BERT, tokenization is the first step in making text understandable to machines.
+Tokenization is a crucial step in text representation as it determines how the text will be broken down and understood by the subsequent models. Whether you're using Bag of Words, Word2Vec, or even more advanced models like GPT-4, tokenization is the first step in making text understandable to machines.
 
 ![](https://aiml.com/wp-content/uploads/2023/02/disadvantage-bow-1024x650.png)
 
