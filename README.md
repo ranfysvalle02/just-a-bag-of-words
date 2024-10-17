@@ -39,13 +39,7 @@ print(tokens)
 - The choice of token depends on the task at hand. For instance, if you're analyzing sentiment, you might want to consider phrases (like "not good") instead of just words.
 - Tokenization isn't always straightforward, especially for languages other than English. Specialized tokenizers might be needed for different languages or tasks.
 
-Got it! Here’s a revised section focusing on the nuances of tokenizing a JSON object structure:
-
----
-
-### **Tokenization: The Crucial First Step in Text Processing**
-
-Before machines can work with text data, it needs to be broken down into smaller, understandable units. This process, known as **tokenization**, is the foundation of any natural language processing (NLP) task. While tokenizing plain text can be straightforward, working with more complex structures—like JSON objects—requires special handling.
+**JSON tokenization**
 
 When dealing with JSON (JavaScript Object Notation) data, tokenization becomes more nuanced. JSON is often used to represent structured data, containing nested objects, arrays, and key-value pairs. Simply splitting text by spaces won’t work here—you’ll need to preserve both the structure and the meaning of the data.
 
