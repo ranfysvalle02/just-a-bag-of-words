@@ -14,19 +14,32 @@ Before we can even begin to represent text in a way that machines can understand
 
 Tokenization might seem like a simple task, but it's more complex than just splitting text by spaces. Consider sentences with contractions like "don't" or "it's," or compound words like "mother-in-law." Different languages also have different rules for tokenization. For instance, in Chinese, words often consist of multiple characters with no spaces in between.
 
-Here's a simple example of tokenization using the Natural Language Toolkit (NLTK) in Python:
+Here’s an illustration of tokenization using the popular Natural Language Toolkit (NLTK) in Python:
 
 ```python
 import nltk
 
-# Sample text
-text = "This is a simple example of tokenization."
+# Download necessary resources
+nltk.download('punkt')
 
-# Tokenize the text
+# Sample text
+text = "Tokenization isn't as easy as it seems."
+
+# Tokenize the text into words
 tokens = nltk.word_tokenize(text)
 
 print(tokens)
 ```
+
+**Output:**
+```
+['Tokenization', 'is', "n't", 'as', 'easy', 'as', 'it', 'seems', '.']
+```
+
+**Key Insights:**
+
+- **Handling Contractions:** Notice how "isn't" is split into "is" and "n't", reflecting the underlying meaning more accurately.
+- **Punctuation Handling:** The period at the end of the sentence is treated as a separate token, which can be crucial in certain NLP tasks like sentiment analysis or named entity recognition.
 
 **Explanation:**
 - `nltk.word_tokenize` splits the input text into individual words, effectively tokenizing the text.
