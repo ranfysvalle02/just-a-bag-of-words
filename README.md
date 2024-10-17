@@ -80,17 +80,28 @@ json_data = json.loads(data)
 
 # Recursively tokenize JSON objects
 def tokenize_json(obj):
-    tokens = []
-    if isinstance(obj, dict):
-        for key, value in obj.items():
-            tokens.append(f'KEY: {key}')
-            tokens.extend(tokenize_json(value))
-    elif isinstance(obj, list):
-        for item in obj:
-            tokens.extend(tokenize_json(item))
-    else:
-        tokens.append(f'VALUE: {str(obj)}')
-    return tokens
+    """Tokenizes a JSON object into a list of tokens.
+
+    Args:
+        obj: The JSON object to tokenize.
+
+    Returns:
+        A list of tokens representing the JSON object.
+    """
+
+    tokens = []  # Initialize an empty list to store the tokens
+
+    if isinstance(obj, dict):  # If the object is a dictionary
+        for key, value in obj.items():  # Iterate over key-value pairs
+            tokens.append(f'KEY: {key}')  # Add the key as a token
+            tokens.extend(tokenize_json(value))  # Recursively tokenize the value
+    elif isinstance(obj, list):  # If the object is a list
+        for item in obj:  # Iterate over items
+            tokens.extend(tokenize_json(item))  # Recursively tokenize each item
+    else:  # If the object is a scalar value
+        tokens.append(f'VALUE: {str(obj)}')  # Add the value as a token
+
+    return tokens  # Return the list of tokens
 
 # Tokenize the parsed JSON
 tokens = tokenize_json(json_data)
