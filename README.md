@@ -34,7 +34,7 @@ print(vectorizer.get_feature_names_out())
 ```
 
 **Explanation:**  
-- `CountVectorizer` converts the text documents into a sparse matrix of word frequencies.
+- `CountVectorizer` converts the text documents into a sparse matrix where each row represents a document and each column represents a word in the vocabulary.
 - This basic BoW model doesn't consider word order or semantics.
 
 
