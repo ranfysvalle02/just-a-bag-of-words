@@ -187,6 +187,8 @@ Tokenizing JSON data is critical in real-world applications where textual data i
 
 ---
 
+## [Learn More About JSON tokenization here ](https://github.com/ranfysvalle02/json-tokenization/)
+
 Tokenization is a crucial step in text representation as it determines how the text will be broken down and understood by the subsequent models. Whether you're using Bag of Words, Word2Vec, or even more advanced models like BERT, tokenization is the first step in making text understandable to machines.
 
 ![](https://aiml.com/wp-content/uploads/2023/02/disadvantage-bow-1024x650.png)
