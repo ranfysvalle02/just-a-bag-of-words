@@ -37,6 +37,19 @@ print(vectorizer.get_feature_names_out())
 - `CountVectorizer` converts the text documents into a sparse matrix where each row represents a document and each column represents a word in the vocabulary.
 - This basic BoW model doesn't consider word order or semantics.
 
+**Key points to remember about CountVectorizer:**
+
+- Vocabulary creation: It automatically creates a vocabulary of unique words from the input text.
+- Sparse matrix representation: It represents the BoW representation as a sparse matrix, which is efficient for handling large datasets with many unique words.
+- Customization: You can customize the CountVectorizer using various parameters, such as stop_words, ngram_range, and max_features, to tailor the BoW representation to your specific needs.
+
+Limitations of Bag of Words:
+
+While the BoW model is simple and easy to implement, it does have its limitations:
+
+- It doesn't capture the order of words or the context in which they're used. This can be problematic for tasks where the order of words is important, such as sentiment analysis or machine translation.
+- It treats each word as an independent entity and doesn't capture the semantic relationships between words.
+- It can result in a high-dimensional feature vector due to the large size of the vocabulary, which can lead to computational challenges.
 
 **Continuous Bag of Words (CBOW): The Quest for Context**
 
