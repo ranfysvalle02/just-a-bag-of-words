@@ -6,8 +6,6 @@
 
 __Image Credit to [Word2Vec vs BERT](https://www.saltdatalabs.com/blog/word2vec-vs-bert)__
 
-### Introduction:
-
 In the last few years, models like BERT (Bidirectional Encoder Representations from Transformers) have radically transformed how we interact with technology, from search engines to virtual assistants. Yet, behind BERT's incredible understanding of language lies a long history of evolving text representation techniques that have shaped the foundation of modern Natural Language Processing (NLP). This blog post takes a journey through the pioneering approaches that dominated before BERT’s emergence, exploring the humble beginnings of Bag of Words (BoW), the innovations of Word2Vec, and how these earlier methods helped us build the AI systems that today power some of the world's largest companies.
 
 As artificial intelligence (AI) continues to integrate deeper into industries from healthcare to finance, understanding these historical methods isn't just academic—it's essential for grasping where NLP is heading in the future. 
