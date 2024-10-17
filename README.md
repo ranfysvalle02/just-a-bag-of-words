@@ -1,6 +1,6 @@
 # The Foundations of Text Representation
 
-## The World Before ChatGPT: How Early Text Representation Models Shaped Today’s AI
+## How Early Text Representation Models Shaped Today’s AI
 
 ![](https://images.squarespace-cdn.com/content/v1/5f831c8e85a8ea3b5baabcbd/1615645049220-VSASS4Q65WTC8YON4FQ3/0*kBwh_sX7lsJxrOvr.png?format=2500w)
 
